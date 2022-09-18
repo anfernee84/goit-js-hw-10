@@ -1,5 +1,7 @@
-function fetchCountries(address, nameCountry, params) {
-  const url = `${address}${nameCountry}${params}`;
+function fetchCountries(nameCountry) {
+  const urlAddress = 'https://restcountries.com/v3.1/name/';
+  const args = `?fields=name,capital,population,flags,languages`;
+  const url = `${urlAddress}${nameCountry}${args}`;
   console.log(url);
   return fetch(url).then(res => {
     if (!res.ok) {
