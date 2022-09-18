@@ -21,7 +21,10 @@ function inputHandler(e) {
     fetchCountries(urlAddress, e.target.value.trim(), args)
       .then(renderCountry)
       .catch(err => {
-        Notiflix.Notify.info('Oops, there is no country with that name', err);
+        Notiflix.Notify.failure(
+          'Oops, there is no country with that name',
+          err
+        );
       });
   }
 }
