@@ -22,10 +22,6 @@ function renderOneCountry(countries) {
 }
 
 function renderSomeCountries(countries) {
-  //   console.log(countries);
-  // return countries.forEach(country =>
-  //   console.log(country.name.official, country.flags[0])
-  // );
   return countries
     .map(({ flags, name }) => {
       console.log(flags.svg, name.official);
